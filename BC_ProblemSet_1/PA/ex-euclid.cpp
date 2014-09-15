@@ -1,5 +1,4 @@
 #include <iostream>
-#include <algorithm>
 
 using namespace std;
 
@@ -13,26 +12,21 @@ using namespace std;
 
 const int MAXN = 1000 + 10;
 
-int n, a[MAXN], lis[MAXN];
+int a, b, c;
 
 void input() {
-	scanf ("%d", &n);
-	rep (i, n) {
-		scanf ("%d", &a[i]);
-	}
+	scanf ("%d%d%d", &a, &b, &c);
 }
 
 void solve() {
-	rep (i, n) {
-		lis[i] = 1;
-		rep (j, i) {
-			if (a[i] > a[j]) {
-				lis[i] = max(lis[i], lis[j] + 1);
-			}
+	int ret = 0;
+	repf (x, 1, c / a) {
+		int py = c - x * a;
+		if (py && py % b == 0) {
+			ret += 1;
 		}
 	}
-	sort (lis, lis + n);
-	printf ("%d\n", lis[n - 2]);
+	printf ("%d\n", ret);
 }
 
 int main() {

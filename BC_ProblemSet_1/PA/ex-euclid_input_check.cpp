@@ -59,10 +59,11 @@ void extra_input() {
 }
 
 #define HACK_STATUS false
+#define MAXT 100
 
 int main() {
-	int T, N, X;
-	int maxt = 100;
+	int T, A, B, C;
+	int maxt = MAXT;
 
 	if (HACK_STATUS) {
 		maxt = 1;
@@ -71,10 +72,9 @@ int main() {
 	try {
 		readint(T, 1, maxt);
 		rep (j, T) {
-			readint(N, 2, 1000);
-			rep (i, N) {
-				readint(X, 1, 1000000);
-			}
+			readint(A, 1, 1000000);
+			readint(B, 1, 1000000);
+			readint(C, 1, 1000000);
 		}
 		extra_input();
 	} catch (...) {
