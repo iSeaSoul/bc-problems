@@ -1,3 +1,5 @@
+## Solution For BestCoder Round 10
+
 ###A - Revenge of Fibonacci
 
 重新定义fib的前两项为A和B，询问C是否fib数列中的一项。

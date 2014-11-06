@@ -1,3 +1,5 @@
+## Solution For BestCoder Round 9
+
 ###A - Revenge of ex-Euclid
 
 可以枚举步长，但显然暴力枚举x更简单...
